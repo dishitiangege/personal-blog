@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>圣诞树-made in 恒哥</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script src="js/jquery.min.js"></script>
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+
+            div {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+
+            .nav {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 27px;
+                background-color: white;
+                color: black;
+                text-align: center;
+                line-height: 25px;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+                border-bottom: 1px dashed black;
+            }
+
+            a:hover {
+                border-bottom: 1px solid red;
+            }
+
+            .previous {
+                float: left;
+                margin-left: 10px;
+            }
+
+            .next {
+                float: right;
+                margin-right: 10px;
+            }
+
+            .green {
+                color: green;
+            }
+
+            .red {
+                color: red;
+            }
+
+            textarea {
+                width: 100%;
+                height: 100%;
+                border: 0;
+                padding: 0;
+                margin: 0;
+                padding-bottom: 20px;
+            }
+
+            .block-outer {
+                float: left;
+                width: 22%;
+                height: 100%;
+                padding: 5px;
+                border-left: 1px solid black;
+                margin: 30px 3px 3px 3px;
+            }
+
+            .block-inner {
+                height: 68%;
+            }
+
+            .one {
+                border: 0;
+            }
+            #c {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+            h1 {
+                text-align: center;
+                color: pink;
+            }
+            p {
+                font-size: 16px;
+                font-family: '宋体';
+                text-align: center;
+            }
+            p:nth-of-type(1) {
+                color: #00ff00;
+            }
+            p:nth-of-type(2) {
+                color: #00ffff;
+                font-family: '隶书';
+            }
+            p:nth-of-type(3) {
+                color: #ffff00;
+                font-family: '姚体';
+            }
+            p:nth-of-type(4) {
+                color: #b5a642;
+                font-family: '华文云体';
+            }
+            p:nth-of-type(5) {
+                color: #d9d919;
+                font-family: '华文行楷';
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            audio {
+                width: 100%;
+            }
+            h5 {
+                display: block;
+                margin-top: 50px;
+            }
+            .zd {
+                width: 100px;
+                height: 50px;
+                color: #fff;
+                background-color: #5cb85c;
+                border-color: #4cae4c;
+                font-size: 20px;
+                outline: none;
+            }
+        </style>
+<script>
+    window.onload = function() {
+        yiyue = document.querySelector('.yinyue')
+        yinyue = document.addEventListener('touchstart',function() {
+        yiyue.play();
+})
+var flag = true;
+    $('.zd').click(function() {
+      if(flag) {
+        //   $('div p').css('display','none');
+          $('h5').fadeOut();
+          $(this).text('显示内容');
+          flag = false;
+      } else {
+        // $('div p').css('display','block');
+        $('h5').fadeIn();
+        $(this).text('折叠内容');
+        flag = true;
+      }
+    })
+alert('由于时间原因，画面样式布局过于粗糙，播放控件，文字内容等UI均未美化，毕竟咱一个大老爷们儿也没那个艺术细胞，先凑合着看，下次一定美化')
+    }
+</script>
+    </head>
+    <body>
+        
+        <canvas id="c" height="386" width="746"></canvas>
+
+        <audio  controls="false" autoplay="autoplay" preload="auto" class="yinyue">
+            <source src="https://link.jscdn.cn/sharepoint/aHR0cHM6Ly8xZHJpdi1teS5zaGFyZXBvaW50LmNvbS86dTovZy9wZXJzb25hbC9zdG9yXzFkcml2X29ubWljcm9zb2Z0X2NvbS9FUTdZR2FMeEcxTk91Q1lhdTlCVk1CWUJSX1hiWlFzMGE3VjNHMjM4czFhRlVB.mp3" type="">
+        </audio>
+        <h1>圣诞节祝福 -by 恒哥</h1>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2Fd4%2Fc1%2Ff7%2Fd4c1f76b9761fa7fb178b336228d630e.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642755390&t=2ea347c3cbe056edb248cf9903cb382f" alt="恒哥">
+        <P>甜蜜绕成环罩着你,这顶圣诞帽送你;青春织成套踩脚下,这双圣诞袜给你;快乐长成树护着你,这棵圣诞树赠你。圣诞节快乐!</P>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fd.paper.i4.cn%2Fmax%2F2018%2F12%2F17%2F15%2F1545031471181_355672.jpg&refer=http%3A%2F%2Fd.paper.i4.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642816338&t=683bf96170b2b0f9747e43be7e478161" alt="">
+        <P>愿明亮喜庆的圣诞烛光,温暖一年中的每个日日夜夜,祝你欢欢喜喜度圣诞,高高兴兴过新年!</P>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimgbdb2.bendibao.com%2Fshbdb%2F201712%2F11%2F20171211204501_35867.gif&refer=http%3A%2F%2Fimgbdb2.bendibao.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642816534&t=63e48ebcf6cc59469245a95bdf6f1828" alt="">
+        <P>愿你的圣诞充满温馨、祥和、与亲人团聚的快乐,祝圣诞乐陶陶,新年乐无限。</P>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0172e15a404608a801206ed3605641.gif&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642816636&t=a1663ae3f89dade89a3f30d1ce5f50cd" alt="">
+        <P>在这个寒冷的冬天,献上我最深的祝福,但愿能温暖你的心,快乐的渡过这缤纷的圣诞节!</P>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171214%2F1a173f58cb7f4e9c8d7ec641d3c8ccbc.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642816792&t=7fcce7ae66f3e178f8029267d578ef3b" alt="">
+        <P>洁白的雪花,五彩的圣诞树,绚丽的烟火一起映衬出多彩的圣诞节。我把我的祝福写成诗、绘成画来表达我的心意:圣诞快乐。</P>
+        <p><span style="font-size: 40px;font-weight: bold; text-align: center;">温馨提示</span>
+            <button class="zd">折叠内容</button></p>
+        <h5>本网页内容受设备影响可能会呈现不同的效果，具体请自行尝试。圣诞树采用canvas技术通过算法绘制而成，歌曲采用背景音乐模式自动播放，在屏幕任意位置点击即可播放。如果您的设备不支持，我也为您准备了播放控件，您可以选择手动播放。文字内容采用AutoColor技术，自动生成。为了提高加载速度，节省您的流量，图片内容采用惰性加载技术。制作不易，且珍惜！</h5>
+        <p style="color: #ccc;font-family: '宋体';font-style: italic;">2021 © <a href="http://dishitian.3vhost.net" >恒哥网</a> ALL RIGHTS RESERVED <a href="http://www.miitbeian.gov.cn" title="网站备案查询" ref="nofollow" target="blank">京ICP备15048447号-1</a> | PROFESSIONAL <a href="3028146841@qq.com">SERVICE</a>. DESIGNED BY <a href="mailto:support@taidupa.com">恒哥</a> <a class="text-title" href="http://www.taidupa.com/node/385" target="_blank" title="免责条款">免责条款 </a></p>
+            <script>
+                var collapsed = true;
+
+                function toggle() {
+                    var fs = top.document.getElementsByTagName('frameset')[0];
+                    var f = fs.getElementsByTagName('frame');
+                    if (collapsed) {
+                        fs.rows = '250px,*';
+                        // enable resizing of frames in firefox/opera
+                        fs.noResize = false;
+                        f[0].noResize = false;
+                        f[1].noResize = false;
+                    } else {
+                        fs.rows = '30px,*';
+                        // disable resizing of frames in firefox/opera
+                        fs.noResize = true;
+                        f[0].noResize = true;
+                        f[1].noResize = true;
+                    }
+                    collapsed = !collapsed;
+                }
+            </script>
+            <script>
+                var b = document.body;
+                var c = document.getElementsByTagName('canvas')[0];
+                var a = c.getContext('2d');
+                document.body.clientWidth; // fix bug in chrome.
+            </script>
+            <script>
+                // start of submission //
+                M = Math;
+                Q = M.random;
+                J = [];
+                U = 16;
+                T = M.sin;
+                E = M.sqrt;
+                for (O = k = 0; x = z = j = i = k < 200;) with (M[k] = k ? c.cloneNode(0) : c) {
+                        width = height = k ? 32 : W = 446;
+                        with (getContext('2d')) if (k > 10 | !k)
+                            for (font = '60px Impact', V = 'rgba('; I = i * U, fillStyle = k ? k == 13 ? V +
+                                '205,205,215,.15)' : V + (147 + I) + ',' + (k % 2 ? 128 + I : 0) + ',' + I +
+                            ',.5)' : '#cca', i < 7;) beginPath(fill(arc(U - i / 3, 24 - i / 2, k == 13 ? 4 - (
+                                i++) / 2 : 8 - i++, 0, M.PI * 2, 1)));
+                        else
+                            for (; x = T(i), y = Q() * 2 - 1, D = x * x + y * y, B = E(D - x / .9 - 1.5 * y + 1),
+                                R = 67 * (B + 1) * (L = k / 9 + .8) >> 1, i++ < W;)
+                                if (D < 1) beginPath(strokeStyle = V + R + ',' + (R + B * L >> 0) + ',40,.1)'),
+                                    moveTo(U + x * 8, U + y * 8), lineTo(U + x * U, U + y * U), stroke();
+                        for (y = H = k + E(k++) * 25, R = Q() * W; P = 3, j < H;) J[O++] = [x += T(R) * P + Q() * 6 - 3,
+                        y += Q() * U - 8, z += T(R - 11) * P + Q() * 6 - 3, j / H * 20 + ((j += U) > H & Q() >
+                            .8 ? Q(P = 9) * 4 : 0) >> 1
+                        ]
+                    }
+                    setInterval(function G(m, l) {
+                        A = T(D - 11);
+                        if (l) return (m[2] - l[2]) * A + (l[0] - m[0]) * T(D);
+                        a.clearRect(0, 0, W, W);
+                        J.sort(G);
+                        for (i = 0; L = J[i++]; a.drawImage(M[L[3] + 1], 207 + L[0] * A + L[2] * T(D) >> 0, L[1] >>
+                            1)) {
+                            if (i == 2e3) a.fillText('MerryChristmas!', U, 386);
+                            if (!(i % 7)) a.drawImage(M[13], ((157 * (i * i) + T(D * 5 + i * i) * 5) % W) >> 0, ((
+                                113 * i + (D * i) / 60) % (290 + i / 99)) >> 0);
+                        }
+                        D += .02
+                    }, 1)
+                // end of submission //
+                </script>
+    </body>
+</html>
